@@ -1,0 +1,29 @@
+<UserControl x:Class="FactorX.UI.Views.HerinneringenView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <DataGrid ItemsSource="{Binding VervallenFacturen}" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Factuurnummer" Binding="{Binding Nummer}"/>
+                <DataGridTextColumn Header="Klant" Binding="{Binding Klant.Naam}"/>
+                <DataGridTextColumn Header="Vervaldatum" Binding="{Binding Vervaldatum, StringFormat=d}"/>
+                <DataGridTextColumn Header="Openstaand bedrag" Binding="{Binding OpenstaandBedrag, StringFormat=C}"/>
+                <DataGridTextColumn Header="Aantal herinneringen" Binding="{Binding AantalHerinneringen}"/>
+                <DataGridTextColumn Header="Laatste herinnering" Binding="{Binding LaatsteHerinneringDatum, StringFormat=d}"/>
+                <DataGridTemplateColumn Header="Actie">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Verstuur herinnering" 
+                                    Command="{Binding DataContext.VerstuurHerinneringCommand, RelativeSource={RelativeSource AncestorType=UserControl}}" 
+                                    CommandParameter="{Binding}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

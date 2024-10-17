@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="Klanten" xml:space="preserve">
+    <value>Klanten</value>
+  </data>
+  <data name="Facturen" xml:space="preserve">
+    <value>Facturen</value>
+  </data>
+  <data name="Offertes" xml:space="preserve">
+    <value>Offertes</value>
+  </data>
+  <data name="NieuweKlant" xml:space="preserve">
+    <value>Nieuwe Klant</value>
+  </data>
+  <data name="Bewerken" xml:space="preserve">
+    <value>Bewerken</value>
+  </data>
+  <data name="Verwijderen" xml:space="preserve">
+    <value>Verwijderen</value>
+  </data>
+  <!-- Voeg hier meer vertalingen toe -->
+</root>

@@ -1,0 +1,53 @@
+<Window x:Class="FactorX.UI.Views.KlantDetailsView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Klant Details" Height="450" Width="400">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Content="Naam:"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding HuidigeKlant.Naam}"/>
+
+        <Label Grid.Row="1" Grid.Column="0" Content="Bedrijfsnaam:"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding HuidigeKlant.Bedrijfsnaam}"/>
+
+        <Label Grid.Row="2" Grid.Column="0" Content="Email:"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding HuidigeKlant.Email}"/>
+
+        <Label Grid.Row="3" Grid.Column="0" Content="Telefoonnummer:"/>
+        <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding HuidigeKlant.Telefoonnummer}"/>
+
+        <Label Grid.Row="4" Grid.Column="0" Content="Adres:"/>
+        <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding HuidigeKlant.Adres}"/>
+
+        <Label Grid.Row="5" Grid.Column="0" Content="Postcode:"/>
+        <TextBox Grid.Row="5" Grid.Column="1" Text="{Binding HuidigeKlant.Postcode}"/>
+
+        <Label Grid.Row="6" Grid.Column="0" Content="Plaats:"/>
+        <TextBox Grid.Row="6" Grid.Column="1" Text="{Binding HuidigeKlant.Plaats}"/>
+
+        <Label Grid.Row="7" Grid.Column="0" Content="BTW Nummer:"/>
+        <TextBox Grid.Row="7" Grid.Column="1" Text="{Binding HuidigeKlant.BTWNummer}"/>
+
+        <StackPanel Grid.Row="10" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Opslaan" Command="{Binding OpslaanCommand}" Margin="0,0,10,0"/>
+            <Button Content="Annuleren" Command="{Binding AnnulerenCommand}"/>
+        </StackPanel>
+    </Grid>
+</Window>

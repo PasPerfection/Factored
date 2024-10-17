@@ -1,0 +1,40 @@
+<Window x:Class="FactorX.UI.Views.ProductDetailsView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Product Details" Height="300" Width="400">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Content="Naam:"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding HuidigProduct.Naam}"/>
+
+        <Label Grid.Row="1" Grid.Column="0" Content="Beschrijving:"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding HuidigProduct.Beschrijving}"/>
+
+        <Label Grid.Row="2" Grid.Column="0" Content="Prijs:"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding HuidigProduct.Prijs}"/>
+
+        <Label Grid.Row="3" Grid.Column="0" Content="Eenheid:"/>
+        <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding HuidigProduct.Eenheid}"/>
+
+        <Label Grid.Row="4" Grid.Column="0" Content="BTW Percentage:"/>
+        <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding HuidigProduct.BTWPercentage}"/>
+
+        <StackPanel Grid.Row="6" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Opslaan" Command="{Binding OpslaanCommand}" Margin="0,0,10,0"/>
+            <Button Content="Annuleren" Command="{Binding AnnulerenCommand}"/>
+        </StackPanel>
+    </Grid>
+</Window>
