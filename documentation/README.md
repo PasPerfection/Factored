@@ -19,7 +19,7 @@ FactorX is een krachtige Windows desktop applicatie voor het eenvoudig opstellen
 
 ## Installatie
 
-1. Download de laatste versie van FactorX vanaf de [releases pagina](https://github.com/yourusername/factorx/releases).
+1. Download de laatste versie van FactorX vanaf de [releases pagina](https://github.com/PasperFection/factorx/releases).
 2. Voer het installatieprogramma uit en volg de instructies op het scherm.
 3. Start FactorX na de installatie via het bureaublad-icoon of het startmenu.
 
