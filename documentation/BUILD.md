@@ -11,7 +11,7 @@ Deze instructies helpen je bij het opzetten van de ontwikkelomgeving voor Factor
 ## Stappen
 
 1. Clone de repository:   ```
-   git clone https://github.com/yourusername/factorx.git   ```
+   git clone https://github.com/PasperFection/factorX.git   ```
 
 2. Open de solution file `FactorX.sln` in Visual Studio.
 
